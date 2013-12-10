@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Unicorn Sparkles</title>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container us-banner">
+	<img class="img-responsive us-banner-logo " src="img/Unicorn Sparkles Logo.png"/>
+	<p class="us-img-attr">image: Smithsonian Institution</p>
+	<div class="row" id="us-navbar">
+		<div class="col-sm-3 col-sm-offset-2">
+			<h1 class="us-nav" id="us-nav1">Camera Key</h1>
+		</div>
+		<div class="col-sm-2">
+			<h1 class="us-nav" id="us-nav2">About</h1>
+		</div>
+		<div class="col-sm-3">
+			<h1 class="us-nav" id="us-nav3">Contact</h1>
+		</div>
+	</div>
+</div>
+<div class="container us-body" id="us-body">
+	<div class="row">
+		<h1>CAMERA KEY</h1>
+		<h2>Making computers more accessible for people with cerebral palsy</h2>
+	</div>
+</div>
+<div class="container us-body" id="us-body2">
+	<div class="row">
+		<h1>ABOUT</h1>
+		<h2>Unicorn Sparkles was founded by 5 University of Michigan students</h2>
+		<br/>
+		<p>We originated as a group for EECS 481: Software Engineering.  The
+			goal of the class was to develop an application to make a girl with
+			cerebral palsy's life easier.  
+			Camera Key was our project for that class.</p>
+	</div>
+</div>
+<script type="text/javascript" src="lib/jquery-2.0.3.js"/></script>
+<script type="text/javascript" src="lib/bootstrap/bootstrap.js"></script>
+<script>
+$('#us-body').hide();
+$('#us-body2').hide();
+$('.us-img-attr').hide();
+$('#us-navbar').hide();
+$(window).resize(function() {
+	$('#us-body').offset({
+		top: $('.us-banner').height(),
+		left: 0
+	});
+
+	$('#us-body2').offset({
+		top: $('.us-banner').height() + $('.us-body').height() + 20,
+		left: 0
+	});
+
+	$('.us-img-attr').css('top', $(window).height() - 20 + 'px');
+});
+
+$(window).load(function() {
+	$('#us-body').offset({
+		top: $('.us-banner').height(),
+		left: 0
+	});
+
+	$('#us-body2').offset({
+		top: $('.us-banner').height(),
+		left: 0
+	});
+	$('#us-body').show();
+	$('#us-body2').show();
+	$('.us-img-attr').css('top', $(window).height() - 20 + 'px');
+	$('.us-img-attr').show();
+	$('#us-navbar').show();
+});
+
+
+$(window).scroll(function() {
+	console.log($(window).scrollTop());
+	var top = -$(window).scrollTop() + $('#us-navbar').height();
+	console.log($('#us-navbar').css('top', top + 'px'));
+});
+
+</script>
+</body>
+</html>

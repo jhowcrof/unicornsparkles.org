@@ -1,0 +1,86 @@
+.us-img-attr {
+	text-align: right;
+	position: absolute;
+	right: 10px;
+	background-color: rgba(30, 30, 30, 0.4);
+	color: rgba(200, 200, 200, 0.6);
+}
+
+.us-banner {
+	width: 100%;
+	height: 100%;
+	background-image: url("img/stars.jpg");
+	background-size: cover;
+	background-position: center center;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 0;
+}
+
+.us-body {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 500px;
+	text-align: center;
+	z-index: 1;
+	padding-top: 20px;
+	padding-left: 15%;
+	padding-right: 15%;  
+}
+
+#us-body {
+	background-color: rgba(256, 256, 256, 0.9);
+}
+
+#us-body2 {
+	color: #DDD;
+	background-color: rgba(50, 50, 50, 0.9);
+}
+
+.us-banner-logo {
+	margin-left: auto;
+	margin-right: auto;
+	height: 75%;
+	width: auto;
+}
+
+.us-nav {
+	cursor: pointer;
+	color: #444;
+	background-color: rgb(137, 191, 253);;
+}
+
+#us-navbar {
+	position: relative;
+	top: 10%;
+}
+
+#us-nav1:hover {
+	color: rgb(202, 147, 175);
+}
+
+#us-nav1 {
+	margin-top: 5px;
+}
+
+#us-nav2:hover {
+	color: rgb(241, 131, 135);
+}
+
+#us-nav2 {
+	margin-top: -4px;
+}
+
+#us-nav3:hover {
+	color: rgb(254, 251, 136);
+}
+
+#us-nav3 {
+	margin-top: 13px;
+}
